@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a7f531a05e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">TB. Andi Jaya</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#!" id="home-button">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Product</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#!" id="product-button" type="button"
+                    >All Products</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#" id="add-product"
+                    >Add Product</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="d-flex justify-content-center mt-0">
+                <input id="form-search" style="width: 300px;" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button id="search-button" class="ms-2 btn btn-outline-primary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-dark" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Cart
+              <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Shop in style</h1>
+          <p class="lead fw-normal text-white-50 mb-0">
+            With this shop hompeage template
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5" id="isi-content"></div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Your Website 2023
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modalAddProduct">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body isiModal"></div>
+          <div class="d-flex justify-content-end mb-4 me-3">
+            <input type="submit" class="btn btn-warning me-2" value="Simpan" id="productAddBtn">
+            <input type="submit" class="btn btn-info " value="Batal" id="productBatalAddBtn">
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modalEditProduct">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body ">
+            <input type="text" value="productEdit" id="pageStatus" hidden="true">
+            <div><span>Id</span></div>
+            <div><input type="email" class="input form-control" disabled="true"></div>
+            <div>&nbsp;</div>
+            <div><span>Name</span></div>
+            <div><input type="email" class="input form-control"></div>
+            <div>&nbsp;</div>
+            <div><span>Price</span></div>
+            <div><input type="email" class="input form-control"></div>
+            <div>&nbsp;</div>
+            <div><span>Qty</span></div>
+            <div><input type="email" class="input form-control"></div>
+            <div>&nbsp;</div>
+            <div><span>Description</span></div>
+            <div><input type="text" class="input form-control"></div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="d-flex justify-content-end mb-4 me-3">
+            <input type="submit" class="btn btn-warning me-2" value="Edit" id="productEditBtn">
+            <input type="submit" class="btn btn-info" value="Batal" id="productBatalEditBtn">
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modalDeleteProduct">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Delete Product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div><span>Id</span></div>
+            <div><input type="email" class="input-del form-control" disabled="true"></div>
+            <div>&nbsp;</div>
+            <div><span>Name</span></div>
+            <div><input type="email" class="input-del form-control" disabled="true"></div>
+            <div>&nbsp;</div>
+            <div><span>Price</span></div>
+            <div><input type="email" class="input-del form-control" disabled="true"></div>
+            <div>&nbsp;</div>
+            <div><span>Qty</span></div>
+            <div><input type="email" class="input-del form-control" disabled="true"></div>
+            <div>&nbsp;</div>
+            <div><span>Description</span></div>
+            <div><input type="text" class="input-del form-control" disabled="true"></div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="d-flex justify-content-end mb-5 me-3">
+            <input type="submit" class="btn btn-warning me-2" value="Hapus" id="productDeleteBtn">
+            <input type="submit" class="btn btn-info " value="Batal" id="productBatalDeleteBtn">
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/jquery-3.7.1.js"></script>
+    <script src="/dashboard/dashboard.js"></script>
+  </body>
+</html>
